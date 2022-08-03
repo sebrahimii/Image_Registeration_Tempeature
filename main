@@ -1,0 +1,21 @@
+from Torngats_Registeration import *
+
+def main(column_north_path ,slab_path):
+    #'https://drive.google.com/file/d/1Ed40r_w6KPA2RhruHwMydzbhZZw3iR_h/view?usp=sharing'
+    column = load(column_north_path)
+    column  = column['north']
+    
+    newseq = registeration_based_movement(data= column, tmats=None, 
+                                          transformation_type='TRANSLATION',
+                                          reference='previous', range_value=1)
+    
+    # https://drive.google.com/file/d/1J8FD47DBs4o0XuSM1G34Hkb9xoFsi9Ac/view?usp=sharing
+    slab = load(slab_path)
+    
+    slab_regs , slab_tmats = registeration(slab, registeration_type='stack', 
+                                           transformation_type='RIGID_BODY', 
+                                           reference='previous', show_overlay=False, 
+                                           filename=None, opt='list')
+    
+if __name__ =='__main__':
+    main()
