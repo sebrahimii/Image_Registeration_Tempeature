@@ -19,3 +19,7 @@ UNREG (SLAB)
 
 REG (SLAB)
 ![image](https://github.com/sebrahimii/Image_Registeration_Tempeature/blob/main/IMAGES/r_slab.png)
+
+
+The results of registered images sequence are located in: 
+https://drive.google.com/drive/folders/1J4nWjwWw9HxAy-npdehAPPVxFGdshLWl?usp=sharing
