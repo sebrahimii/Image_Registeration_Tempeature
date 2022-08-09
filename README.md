@@ -1,4 +1,4 @@
-# Image_Registeration_Tempeature
+# Image_Registeration_Temperature
 
 Registration of Temperature based Images
 
