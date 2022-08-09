@@ -16,6 +16,9 @@ def main(column_north_path ,slab_path):
                                            transformation_type='RIGID_BODY', 
                                            reference='previous', show_overlay=False, 
                                            filename=None, opt='list')
+                                           
+    return   newseq,  slab_regs , slab_tmats                                  
     
 if __name__ =='__main__':
-    main()
+    column_north_path ,slab_path
+    newseq,  slab_regs , slab_tmats = main(column_north_path ,slab_path)
