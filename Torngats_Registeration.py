@@ -243,11 +243,18 @@ def registeration(unreg, registeration_type = 'single',transformation_type = 'al
         ax[0].imshow(overlay_images(unreg, aggregator=np.mean), cmap='gray')
         ax[0].set_title('Original (overlay)')
         ax[0].axis('off')
-        
-        for i, (name, tf) in enumerate(transformations.items()):
-            ax[i+1].imshow(overlay_images(reg, aggregator=np.mean), cmap='gray')
-            ax[i+1].set_title(name + ' (overlay)')
-            ax[i+1].axis('off')
+        if registeration_type == 'stack':
+            
+            for i, (name, tf) in enumerate(transformations.items()):
+                ax[i+1].imshow(overlay_images(regs[i], aggregator=np.mean), cmap='gray')
+                ax[i+1].set_title(name + ' (overlay)')
+                ax[i+1].axis('off')
+        else:
+            
+            for i, (name, tf) in enumerate(transformations.items()):
+                ax[i+1].imshow(overlay_images([unreg[0],regs[i]], aggregator=np.mean), cmap='gray')
+                ax[i+1].set_title(name + ' (overlay)')
+                ax[i+1].axis('off')
     #------------------------------save OUTPUTS--------------------------------
     
     if filename is not None:
